@@ -21,7 +21,7 @@ a {
   text-decoration: inherit;
   padding: .5em;
   &.active {
-    @apply bg-neutral-100 rounded-full;
+    @apply bg-slate-50 rounded-full;
   }
 }
 a:hover {
@@ -34,11 +34,6 @@ body {
   padding: 2em;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {

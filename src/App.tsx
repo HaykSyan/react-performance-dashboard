@@ -1,8 +1,6 @@
-import AppRouter from "./routes/Router";
-import Header from "./components/layout/Header";
-import Sidebar from "./components/layout/Sidebar";
-
-import "./App.css";
+import { AppRouter } from "@/app/router";
+import Header from "@/shared/components/layout/Header";
+import Sidebar from "@/shared/components/layout/Sidebar";
 
 function App() {
   return (
@@ -10,7 +8,7 @@ function App() {
       <Sidebar />
       <div className="flex flex-col flex-1 gap-6">
         <Header />
-        <main className="p-4 overflow-auto bg-white rounded-3xl shadow">
+        <main className="p-4 overflow-auto bg-white rounded-2xl shadow">
           <AppRouter />
         </main>
       </div>
