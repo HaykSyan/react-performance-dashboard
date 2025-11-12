@@ -13,7 +13,8 @@ export function useComponentProfile<T extends object>(
     if (prevProps.current) {
       const changed = Object.keys(props).filter(
         (key) =>
-          props[key as keyof typeof props] !== (prevProps.current as any)[key]
+          props[key as keyof typeof props] !==
+          (prevProps.current as Record<string, T>)[key]
       );
 
       if (changed.length > 0) {

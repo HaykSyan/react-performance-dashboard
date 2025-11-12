@@ -1,23 +1,4 @@
-import { useState, useEffect } from "react";
-
-export function useLatencyFetch(url: string) {
-  const [data, setData] = useState<any>(null);
-  const [latency, setLatency] = useState<number | null>(null);
-
-  useEffect(() => {
-    const start = performance.now();
-    fetch(url)
-      .then((r) => r.json())
-      .then((json) => {
-        const end = performance.now();
-        setLatency(end - start);
-        setData(json);
-      });
-  }, [url]);
-
-  return { data, latency };
-}
-
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 export function useLatencyFetchOptimal(url: string) {

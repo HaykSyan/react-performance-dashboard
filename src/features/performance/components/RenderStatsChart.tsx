@@ -13,8 +13,8 @@ const data = [...Array(10)].map((_, i) => ({
 }));
 
 const accessors = {
-  xAccessor: (d: any) => d.cycle,
-  yAccessor: (d: any) => d.renders,
+  xAccessor: (d?: { cycle?: number }) => d?.cycle ?? 0,
+  yAccessor: (d?: { renders?: number }) => d?.renders ?? 0,
 };
 
 export default function RenderStatsChart() {

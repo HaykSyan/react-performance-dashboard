@@ -7,8 +7,8 @@ import {
 } from "@visx/xychart";
 
 const accessors = {
-  xAccessor: (d: any) => d.iteration,
-  yAccessor: (d: any) => d.ms,
+  xAccessor: (d?: { iteration?: number }) => d?.iteration ?? 0,
+  yAccessor: (d?: { ms?: number }) => d?.ms ?? 0,
 };
 
 export function LatencyChart({ samples }: { samples: number[] }) {

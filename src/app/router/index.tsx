@@ -12,7 +12,7 @@ const Users = lazy(() => import("@/features/users/pages/Users"));
 const Reports = lazy(() => import("@/features/reports/pages/Reports"));
 const Analyzer = lazy(() => import("@/features/analyzer/pages/Analyzer"));
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,

@@ -23,7 +23,9 @@ export default function HeavyLatencyLoadChart() {
 
       <LatencyChart samples={samples} />
 
-      {!isLoading && data && <SlowList items={data.map((p: any) => p.id)} />}
+      {!isLoading && data && (
+        <SlowList items={data.map((p: { id: number }) => p.id)} />
+      )}
     </div>
   );
 }

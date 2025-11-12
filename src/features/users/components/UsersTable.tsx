@@ -19,12 +19,14 @@ export function UsersTable() {
       </div>
       <table className="min-w-full">
         <tbody>
-          {data.map((u: any) => (
-            <tr key={u.id} className="not-first:border-t border-gray-400">
-              <td className="p-2">{u.name}</td>
-              <td className="p-2 text-gray-500">{u.email}</td>
-            </tr>
-          ))}
+          {data.map(
+            (u: { id: string | number; name: string; email: string }) => (
+              <tr key={u.id} className="not-first:border-t border-gray-400">
+                <td className="p-2">{u.name}</td>
+                <td className="p-2 text-gray-500">{u.email}</td>
+              </tr>
+            )
+          )}
         </tbody>
       </table>
     </div>
