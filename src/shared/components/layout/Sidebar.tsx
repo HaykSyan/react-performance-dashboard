@@ -14,9 +14,9 @@ export default function Sidebar() {
     <aside>
       <RenderCountBadge />
       <Card className="py-4 px-2.5 space-y-4 flex flex-col gap-1 rounded-full! w-fit">
-        <a href="/">
+        <Link to="/">
           <DashboardIcon />
-        </a>
+        </Link>
         <Link to="/performance" prefetch="intent">
           <GrowIcon />
         </Link>
@@ -26,9 +26,9 @@ export default function Sidebar() {
         <Link to="/reports" prefetch="intent">
           <ReportsIcon />
         </Link>
-        <a href="/analyzer">
+        <Link to="/analyzer">
           <AnalyzerIcon />
-        </a>
+        </Link>
       </Card>
     </aside>
   );

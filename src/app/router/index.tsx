@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import App from "@/App";
 import { ErrorBoundary } from "@/shared/components/ErrorBoundary";
 
 const Dashboard = lazy(() => import("@/features/dashboard/pages/Dashboard"));
@@ -13,48 +15,50 @@ const Analyzer = lazy(() => import("@/features/analyzer/pages/Analyzer"));
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Suspense fallback={<>Loading...</>}>
-        <Dashboard />
-      </Suspense>
-    ),
+    element: <App />,
     errorElement: <ErrorBoundary />,
-  },
-  {
-    path: "/performance",
-    element: (
-      <Suspense fallback={<>Loading...</>}>
-        <Performance />
-      </Suspense>
-    ),
-    errorElement: <ErrorBoundary />,
-  },
-  {
-    path: "/users",
-    element: (
-      <Suspense fallback={<>Loading...</>}>
-        <Users />
-      </Suspense>
-    ),
-    errorElement: <ErrorBoundary />,
-  },
-  {
-    path: "/reports",
-    element: (
-      <Suspense fallback={<>Loading...</>}>
-        <Reports />
-      </Suspense>
-    ),
-    errorElement: <ErrorBoundary />,
-  },
-  {
-    path: "/analyzer",
-    element: (
-      <Suspense fallback={<>Loading...</>}>
-        <Analyzer />
-      </Suspense>
-    ),
-    errorElement: <ErrorBoundary />,
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<>Loading...</>}>
+            <Dashboard />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/performance",
+        element: (
+          <Suspense fallback={<>Loading...</>}>
+            <Performance />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/users",
+        element: (
+          <Suspense fallback={<>Loading...</>}>
+            <Users />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/reports",
+        element: (
+          <Suspense fallback={<>Loading...</>}>
+            <Reports />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/analyzer",
+        element: (
+          <Suspense fallback={<>Loading...</>}>
+            <Analyzer />
+          </Suspense>
+        ),
+      },
+    ],
   },
 ]);
 
