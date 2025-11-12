@@ -7,6 +7,7 @@ import {
   UserIcon,
 } from "@/shared/components/ui/icons/Icons";
 import { RenderCountBadge } from "@/shared/components/RenderCountBadge";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -16,15 +17,15 @@ export default function Sidebar() {
         <a href="/">
           <DashboardIcon />
         </a>
-        <a href="/performance">
+        <Link to="/performance" prefetch="intent">
           <GrowIcon />
-        </a>
-        <a href="/users">
+        </Link>
+        <Link to="/users" prefetch="intent">
           <UserIcon />
-        </a>
-        <a href="/reports">
+        </Link>
+        <Link to="/reports" prefetch="intent">
           <ReportsIcon />
-        </a>
+        </Link>
         <a href="/analyzer">
           <AnalyzerIcon />
         </a>
