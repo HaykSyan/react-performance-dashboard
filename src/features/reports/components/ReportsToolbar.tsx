@@ -28,6 +28,7 @@ export const ReportsToolbar = memo(function ReportsToolbar({
       <Button
         onClick={onToggleSort}
         className="px-3 py-2 rounded border bg-gray-200 hover:bg-gray-300"
+        data-testid="sort-toggler"
       >
         Sort: {sortAsc ? "A → Z" : "Z → A"}
       </Button>
