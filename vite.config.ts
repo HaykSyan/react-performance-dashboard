@@ -29,7 +29,7 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           router: ["react-router-dom"],
           query: ["@tanstack/react-query"],
-          charts: ["@visx/xychart", "d3-scale", "d3-shape", "d3-array"],
+          charts: ["@visx/xychart"],
         },
       },
     },
