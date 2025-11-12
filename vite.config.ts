@@ -19,7 +19,7 @@ export default defineConfig({
       open: true,
       gzipSize: true,
       brotliSize: true,
-      filename: "analyse.html",
+      filename: "dist/analyse.html",
     }) as PluginOption,
   ],
   build: {
