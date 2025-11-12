@@ -90,6 +90,18 @@ yarn run dev
 
 ---
 
+## 🧪 Testing
+
+```bash
+pnpm test
+# or
+npm test
+# or
+yarn test
+```
+
+---
+
 ## 🏗 Build & Analyze
 
 ```bash
