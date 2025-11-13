@@ -1,4 +1,4 @@
-import { vi } from "vitest";
+import { vi, type Mock } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useLatencyFetch } from "../hooks/useLatencyFetch";
@@ -14,7 +14,7 @@ describe("useLatencyFetch", () => {
       Promise.resolve({
         json: () => Promise.resolve({ message: "ok" }),
       })
-    ) as any;
+    ) as Mock;
   });
 
   afterEach(() => {
