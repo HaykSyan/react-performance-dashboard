@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
-export function useLatencyFetchOptimal(url: string) {
+export function useLatencyFetch(url: string) {
   const [latency, setLatency] = useState<number | null>(null);
 
   const { data, isLoading } = useQuery({

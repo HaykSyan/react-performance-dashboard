@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useLatencyFetchOptimal } from "@/shared/hooks/useLatencyFetch";
+import { useLatencyFetch } from "@/shared/hooks/useLatencyFetch";
 import { LatencyChart } from "../components/LatencyChart";
 import { SlowList } from "../components/SlowList";
 
 export default function HeavyLatencyLoadChart() {
   const [samples, setSamples] = useState<number[]>([]);
-  const { data, latency, isLoading } = useLatencyFetchOptimal(
+  const { data, latency, isLoading } = useLatencyFetch(
     "https://jsonplaceholder.typicode.com/posts"
   );
 
